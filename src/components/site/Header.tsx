@@ -32,8 +32,8 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 text-paper transition-all duration-500",
-          scrolled ? "bg-ink/92 backdrop-blur-md" : "bg-transparent",
+          "fixed inset-x-0 top-0 z-50 border-b border-onyx/10 text-ink transition-all duration-500",
+          scrolled ? "bg-paper/95 shadow-sm backdrop-blur-md" : "bg-paper/90 backdrop-blur-md",
         )}
       >
         <motion.div aria-hidden style={{ scaleX: progress }} className="absolute inset-x-0 bottom-0 h-px origin-left bg-volt" />
@@ -54,8 +54,8 @@ export function Header() {
                     to={item.to}
                     onFocus={() => setHover(item.children ? item.label : null)}
                     className={cn(
-                      "relative flex items-center gap-1 px-3.5 py-2 text-[0.9rem] font-medium tracking-wide text-paper/80 transition-colors hover:text-paper",
-                      isActive(item) && "text-paper",
+                      "relative flex items-center gap-1 px-3.5 py-2 text-[0.9rem] font-medium tracking-wide text-ink/80 transition-colors hover:text-ink",
+                      isActive(item) && "text-ink",
                     )}
                   >
                     {item.label}
@@ -71,14 +71,14 @@ export function Header() {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="absolute left-0 top-full pt-3"
                       >
-                        <div className="w-80 border border-line-dark bg-ink p-2 shadow-lift">
+                        <div className="w-80 border border-onyx/15 bg-paper p-2 shadow-lift">
                           {item.children.map((c) => (
                             <Link key={c.to + c.label} to={c.to} className="group block px-4 py-3 transition-colors hover:bg-paper/5">
-                              <span className="flex items-center justify-between font-display text-lg font-medium tracking-tight text-paper">
+                              <span className="flex items-center justify-between font-display text-lg font-medium tracking-tight text-ink">
                                 {c.label}
                                 <span className="h-px w-0 bg-volt transition-all duration-500 group-hover:w-6" />
                               </span>
-                              {c.note && <span className="mt-0.5 block text-sm text-paper/50">{c.note}</span>}
+                              {c.note && <span className="mt-0.5 block text-sm text-muted-foreground">{c.note}</span>}
                             </Link>
                           ))}
                         </div>
@@ -106,7 +106,7 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[60] flex flex-col bg-ink text-paper"
+            className="fixed inset-0 z-[60] flex flex-col bg-bone text-ink"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
@@ -122,7 +122,7 @@ export function Header() {
               </button>
             </div>
             <nav className="container-x flex-1 overflow-y-auto pb-8 pt-4" aria-label="Mobile">
-              <ul className="divide-y divide-line-dark border-y border-line-dark">
+              <ul className="divide-y divide-onyx/10 border-y border-onyx/10">
                 <li><Link to="/" className="block py-4 font-display text-3xl font-medium tracking-tight">Home</Link></li>
                 {nav.map((item, i) => (
                   <motion.li key={item.label} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 + i * 0.04 }}>
@@ -141,9 +141,9 @@ export function Header() {
                             <motion.ul initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="overflow-hidden">
                               {item.children.map((c) => (
                                 <li key={c.label}>
-                                  <Link to={c.to} className="flex items-baseline justify-between gap-4 pb-3 pl-1 text-lg text-paper/75">
+                                  <Link to={c.to} className="flex items-baseline justify-between gap-4 pb-3 pl-1 text-lg text-ink/75">
                                     {c.label}
-                                    <span className="truncate text-xs text-paper/40">{c.note}</span>
+                                    <span className="truncate text-xs text-ink/40">{c.note}</span>
                                   </Link>
                                 </li>
                               ))}
@@ -159,7 +159,7 @@ export function Header() {
               </ul>
               <div className="mt-8 grid gap-3">
                 <Cta to="/book-online" variant="volt" size="lg">Book Now</Cta>
-                <a href={contact.phoneHref} className="text-center text-sm text-paper/60">{contact.phone} · {contact.email}</a>
+                <a href={contact.phoneHref} className="text-center text-sm text-ink/60">{contact.phone} · {contact.email}</a>
               </div>
             </nav>
           </motion.div>

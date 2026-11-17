@@ -1,6 +1,6 @@
 import heroSmash from "@/assets/hero-smash.jpg";
 import closingGrip from "@/assets/closing-grip.jpg";
-import fortiusWordmark from "@/assets/fortius-wordmark.svg";
+import fortiusLogo from "@/assets/fortius-logo.avif";
 
 // Keep image references local. The *.asset.json files point at Lovable's
 // /__l5e asset gateway, which is not available in a standalone Vite build and
@@ -24,7 +24,7 @@ export const img = {
   facilityPickleballCourts: closingGrip,
   facilityPickleballIndoor: closingGrip,
   logoMark: closingGrip,
-  logoWordmark: fortiusWordmark,
+  logoWordmark: fortiusLogo,
   promoBadmintonTraining: heroSmash,
   promoBoltSwift: heroSmash,
   promoFast: heroSmash,
