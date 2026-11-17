@@ -38,7 +38,7 @@ function Home() {
             <motion.p initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="inline-flex items-center gap-2 rounded-full border border-volt/40 bg-volt/10 px-4 py-2 text-sm text-volt">
               <span className="h-2 w-2 animate-pulse rounded-full bg-volt" /> Alpharetta &amp; Cumming, GA
             </motion.p>
-            <h1 className="mt-8 font-display text-[clamp(3.2rem,8vw,7.5rem)] font-semibold leading-[0.9] tracking-[-0.04em]">
+            <h1 className="mt-8 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.04em]">
               <SplitLines lines={["Smash.", "Dink."]} delay={0.25} />
               <span className="block text-volt"><SplitLines lines={["Spin."]} delay={0.45} /></span>
             </h1>

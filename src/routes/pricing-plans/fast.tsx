@@ -19,7 +19,7 @@ function Fast() {
       <section className="grain relative bg-ink pb-20 pt-36 text-paper">
         <div className="container-x">
           <p className="eyebrow text-volt">Fortius Agility Strength Training</p>
-          <h1 className="mt-6 font-display text-[clamp(6rem,24vw,22rem)] font-bold leading-[0.8] tracking-[-0.06em] text-volt"><SplitLines lines={["FAST"]} /></h1>
+          <h1 className="mt-6 font-display text-[clamp(4.5rem,16vw,11rem)] font-bold leading-[0.82] tracking-[-0.06em] text-volt"><SplitLines lines={["FAST"]} /></h1>
           <div className="mt-10 grid gap-10 border-t border-line-dark pt-8 md:grid-cols-[1.3fr_1fr]">
             <div>
               <h2 className="display-md">High Performance Strength &amp; Conditioning Program</h2>
