@@ -212,7 +212,7 @@ function Home() {
                   <span className="font-display text-3xl font-medium tracking-tight transition-transform duration-500 group-hover:translate-x-3 md:text-5xl">{t}</span>
                   <span className="hidden text-paper/55 md:block">{sub}</span>
                   <ArrowUpRight className="h-6 w-6 text-volt transition-transform duration-500 group-hover:rotate-45" />
-                  <img src={im} alt="" loading="lazy" className="pointer-events-none absolute right-24 top-1/2 hidden h-40 w-32 -translate-y-1/2 rotate-3 object-cover opacity-0 transition-all duration-500 group-hover:-rotate-2 group-hover:opacity-100 lg:block" />
+                  <img src={im} alt="" loading="lazy" className="pointer-events-none absolute right-7 top-1/2 hidden h-40 w-32 -translate-y-1/2 rotate-3 object-cover opacity-0 transition-all duration-500 group-hover:-rotate-2 group-hover:opacity-100 lg:block" />
                 </Link>
               </Reveal>
             ))}

@@ -42,7 +42,7 @@ function ProShop() {
           <h2 className="display-lg mt-5">In-store now.</h2>
           <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
             {[[img.promoBoltSwift, "Bolt & Swift shuttles"], [img.promoBadmintonTraining, "Badminton training — walk-in"], [img.promoFast, "FAST — Stay fit, not still"], [img.promoFeedingMachine, "Badminton feeding machine rental"]].map(([s, a]) => (
-              <Reveal key={a} className="img-zoom aspect-[3/4] bg-paper"><img src={s} alt={a} loading="lazy" className="h-full w-full object-contain" /></Reveal>
+              <Reveal key={a} className="img-zoom aspect-[3/4] bg-paper"><img src={s} alt={a} loading="lazy" className="h-full w-full object-cover" /></Reveal>
             ))}
           </div>
           <RevealImage src={img.proshopApparel} alt="Fortius Pro Shop interior" className="mt-4 aspect-[21/9]" />
